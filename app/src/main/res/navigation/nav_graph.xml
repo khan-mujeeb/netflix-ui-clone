@@ -3,26 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/detailsFragment">
-
+    app:startDestination="@id/homeFragment">
     <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.example.netflixuiclone.ui.DetailsFragment"
-        android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
-    <fragment
-        android:id="@+id/downloadFragment"
-        android:name="com.example.netflixuiclone.home.DownloadFragment"
-        android:label="fragment_download"
-        tools:layout="@layout/fragment_download" />
-    <fragment
-        android:id="@+id/bookmarkFragment"
-        android:name="com.example.netflixuiclone.home.BookmarkFragment"
-        android:label="fragment_bookmark"
-        tools:layout="@layout/fragment_bookmark" >
+        android:id="@+id/homeFragment"
+        android:name="com.example.netflixuiclone.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_bookmarkFragment_to_downloadFragment"
-            app:destination="@id/downloadFragment" />
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -34,15 +23,17 @@
             app:destination="@id/bookmarkFragment" />
     </fragment>
     <fragment
-        android:id="@+id/homeFragment"
-        android:name="com.example.netflixuiclone.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" >
+        android:id="@+id/bookmarkFragment"
+        android:name="com.example.netflixuiclone.home.BookmarkFragment"
+        android:label="fragment_bookmark"
+        tools:layout="@layout/fragment_bookmark" >
         <action
-            android:id="@+id/action_homeFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            android:id="@+id/action_bookmarkFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.netflixuiclone.home.DownloadFragment"
+        android:label="fragment_download"
+        tools:layout="@layout/fragment_download" />
 </navigation>

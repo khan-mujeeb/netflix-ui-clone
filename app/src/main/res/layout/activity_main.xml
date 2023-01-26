@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:layout_alignParentTop="true"
+        android:layout_above="@id/bottom_navBar"
         android:id="@+id/nav_host_fragment_container"
         android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost = "true"
@@ -20,10 +20,11 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:background="@color/nav_bar"
         app:itemRippleColor="@color/white"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="unlabeled"
         android:visibility="visible"
         android:id="@+id/bottom_navBar"
         app:menu="@menu/bottom_nav_menu"
+
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
