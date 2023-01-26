@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:padding="8dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".home.HomeFragment">
 
+    <ImageView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/menu"
+        android:src="@drawable/ic_baseline_notes_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/get_plans"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/purple_500"
+        android:text="Get Plan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:layout_below="@id/get_plans"
+        android:id="@+id/categories"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:id="@+id/all"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="All Shows"
+            android:textSize="14sp"/>
+
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:id="@+id/movies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Movies"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:id="@+id/tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="TV Shows"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:layout_weight="1"
+            android:id="@+id/drama"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Web Drama"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</RelativeLayout>
