@@ -11,10 +11,11 @@
         android:layout_alignParentStart="true"
         android:id="@+id/menu"
         android:src="@drawable/ic_baseline_notes_24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
 
     <Button
+        android:textColor="@color/white"
         android:id="@+id/get_plans"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"/>
 
     <LinearLayout
-        android:layout_margin="15dp"
+        android:layout_marginTop="15dp"
         android:layout_below="@id/get_plans"
         android:id="@+id/categories"
         android:orientation="horizontal"
@@ -69,7 +70,118 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="Web Drama"
-            android:textSize="14sp"/>
+            android:textSize="13sp"/>
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="24dp"
+        android:layout_below="@id/categories"
+        android:id="@+id/watchlistlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/watchlist"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Watchlist"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="More"
+            android:textColor="@color/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/watchlist"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+
+                android:id="@+id/one"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:id="@+id/two"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+            <ImageView
+                android:id="@+id/three"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/watchlistlayout"
+        android:id="@+id/upcominglayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/upcoming"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="Upcoming"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:text="More"
+            android:textColor="@color/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginTop="8dp"
+            android:layout_below="@id/upcoming"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+            <ImageView
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+            <ImageView
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+
 </RelativeLayout>

@@ -39,6 +39,10 @@ android {
 
 dependencies {
 
+
+    // dependency for loading image from url
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+
     // Material Design Components
     implementation 'com.google.android.material:material:1.6.1'
 
